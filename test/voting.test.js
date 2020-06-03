@@ -18,7 +18,7 @@ describe('voting contract',()=>{
     it('deploys a contract',async ()=>{
         assert(votingContract.options.address);
     });
-    /*
+    
     it('candidate is entered',async ()=>{
         await votingContract.methods.createCandidate("dheer",'0xad1CFfA5AC0FE68967E93B6502B72666A7123742').send(
             {from:accounts[0],gas:'1000000'}
@@ -41,6 +41,6 @@ describe('voting contract',()=>{
         const index=await votingContract.methods.pickWinner().call({from:accounts[0],gas:'1000000'});
         assert(index==0);
     });
-    */
+    
     
 });

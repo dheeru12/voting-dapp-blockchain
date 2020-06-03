@@ -1,7 +1,7 @@
 import web3 from './web3';
-import voting from './compile';
+const abi=[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"name":"CandidateCount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"candidates","outputs":[{"internalType":"address","name":"candidateAddress","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"party","type":"string"},{"internalType":"string","name":"description","type":"string"},{"internalType":"uint256","name":"votes","type":"uint256"},{"internalType":"uint256","name":"id","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"name","type":"string"},{"internalType":"address","name":"candidateAddress","type":"address"},{"internalType":"string","name":"party","type":"string"},{"internalType":"string","name":"description","type":"string"}],"name":"createCandidate","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"manager","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"pickWinner","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"returnNames","outputs":[{"internalType":"address[]","name":"","type":"address[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"id","type":"uint256"}],"name":"vote","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"voters","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"}];
 const instance= new web3.eth.Contract(
-    voting.abi,
-    '0xF429e79e55FAfc0041BD167478b8bDDb890dc934'
+    abi,
+    '0x1D46f731b1fA66d97315E319cfA2516DB38a9484'
 );
 export default instance;

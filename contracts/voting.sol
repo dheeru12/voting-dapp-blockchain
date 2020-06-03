@@ -17,7 +17,7 @@ contract voting{
         CandidateCount=0;
     }
     Candidate[] public candidates;
-    mapping(address=>bool) voters;
+    mapping(address=>bool) public voters;
     address[] names;
     function createCandidate(string memory name,address candidateAddress,string memory party,string memory description) public{
         require(!participants[candidateAddress]);
@@ -36,6 +36,7 @@ contract voting{
         CandidateCount++;
     }
     function vote(uint id) public{
+        require(!voters[msg.sender]);
         voters[msg.sender]=true;
         candidates[id].votes++;
     }
